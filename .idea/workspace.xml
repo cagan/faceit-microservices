@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6700dc37-7e02-4ddf-8c0d-7cd9dcadba26" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/user-service/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+    <list default="true" id="6700dc37-7e02-4ddf-8c0d-7cd9dcadba26" name="Changes" comment="change Readme.md location.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/faceit/userservice/ResponseBodyMatchers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/faceit/userservice/integration/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/faceit/userservice/unit/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/producer/UserEntityChangeProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/producer/UserEntityChangeProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/rest/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/rest/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/rest/validator/PasswordConstraintValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/faceit/userservice/rest/validator/PasswordConstraintValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/faceit/userservice/UserServiceApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,15 +62,99 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "aspect.path.notification.shown": "true",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "442cf4015509eda9c03e5ca3aceef752"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.UserControllerTest.getUsersResponseAsExpected">
+    <configuration name="UserControllerTest.getUsersResponseAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.faceit.userservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
+      <option name="METHOD_NAME" value="getUsersResponseAsExpected" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.faceit.userservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
+      <option name="METHOD_NAME" value="whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.whenValidInputThenReturnsUserCreateResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.faceit.userservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
+      <option name="METHOD_NAME" value="whenValidInputThenReturnsUserCreateResponse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.whenValidInput_thenMapsToBusinessModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.faceit.userservice.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
+      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
+      <option name="METHOD_NAME" value="whenValidInput_thenMapsToBusinessModel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.faceit.userservice.unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.faceit.userservice.unit" />
+      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.unit.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" value="dev" />
       <module name="user-service" />
@@ -67,6 +168,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.UserControllerTest.getUsersResponseAsExpected" />
+      <item itemvalue="JUnit.UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
+      <item itemvalue="JUnit.UserControllerTest.whenValidInputThenReturnsUserCreateResponse" />
+      <item itemvalue="JUnit.UserControllerTest.whenValidInput_thenMapsToBusinessModel" />
+      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserControllerTest.getUsersResponseAsExpected" />
+        <item itemvalue="JUnit.UserControllerTest.whenValidInputThenReturnsUserCreateResponse" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserControllerTest.whenValidInput_thenMapsToBusinessModel" />
+        <item itemvalue="JUnit.UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,8 +194,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667175631607</updated>
-      <workItem from="1667175632880" duration="986000" />
+      <workItem from="1667175632880" duration="21462000" />
+      <workItem from="1667323437738" duration="17211000" />
     </task>
+    <task id="LOCAL-00001" summary="change Readme.md location.">
+      <created>1667176636426</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667176636426</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,5 +220,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="change Readme.md location." />
+    <option name="LAST_COMMIT_MESSAGE" value="change Readme.md location." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/faceit_microservices$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1667325497684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>unit.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/faceit_microservices$UserServiceApplicationTests_contextLoads.ic" NAME="UserServiceApplicationTests.contextLoads Coverage Results" MODIFIED="1667236838137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.faceit.userservice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/faceit_microservices$UserServiceApplicationTests.ic" NAME="UserServiceApplicationTests Coverage Results" MODIFIED="1667237909873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.faceit.userservice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/faceit_microservices$UserServiceTest_itShouldSaveUserSuccessfully.ic" NAME="UserServiceTest.itShouldSaveUserSuccessfully Coverage Results" MODIFIED="1667251666587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>service.*</FILTER>
+    </SUITE>
   </component>
 </project>

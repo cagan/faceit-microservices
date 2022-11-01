@@ -32,12 +32,12 @@ public class UserController {
     /**
      * {@code POST  /api/v1/user} : Create new user
      *
-     * @param user the request to create new user
+     * @param request the request to create new user
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body of the new created user, or with status {@code 400 (Bad Request) if the user already exists.}
      */
     @PostMapping
-    public ResponseEntity<UserResponse> create(@Valid @RequestBody UserCreateRequest user) {
-        var createdUser = userService.createUser(user);
+    public ResponseEntity<UserResponse> create(@Valid @RequestBody UserCreateRequest request) {
+        var createdUser = userService.createUser(request);
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(UserResponseMapper.INSTANCE.toDTO(createdUser));
     }
@@ -47,7 +47,7 @@ public class UserController {
      *
      * @param page default = 0, page number of the given user list.
      * @param size default = 10, number of elements to user list.
-     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} and with body of the list of users}
+     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} and with body of the list of users
      */
     @GetMapping
     public ResponseEntity<List<UserResponse>> getUsers(@RequestParam(defaultValue = "0") Integer page, @RequestParam(defaultValue = "10") Integer size) {
@@ -60,7 +60,7 @@ public class UserController {
      * {@code GET  /api/v1/user/:id} : Get users
      *
      * @param id id of the user
-     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} body of the found user}
+     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} body of the found user
      */
     @GetMapping("/{id}")
     public ResponseEntity<UserResponse> getUserById(@PathVariable("id") String id) {
@@ -74,7 +74,7 @@ public class UserController {
      * {@code POST  /api/v1/user/search} : Search user
      *
      * @param request search by firstname, lastname, email or country. It looks only for equality for now.
-     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} body of the found users with count}
+     * @return the {@link ResponseEntity} with status {@code 200 (Ok)} body of the found users with count
      */
     @PostMapping("/search")
     public ResponseEntity<UserQueryResponse> search(@RequestBody UserQueryRequest request) {
