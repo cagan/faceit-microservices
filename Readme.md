@@ -34,6 +34,10 @@ User Management microservice that makes CRUD operations and notifies other servi
 - Type: ```docker-compose -f docker/docker-compose.yml up -d```
 - You can see the logs running: ```docker-compose -f docker/docker-compose.yml logs -f```
 
+### For Building Maven Project:
+- Change application-dev.properties for your local environment. You can use docker-compose-local.yaml file for local environments.
+- Run this command to build the project ```./mvnw spring-boot:run -Dspring-boot.run.profiles=dev```
+
 ## Swagger Link:
 You can access API endpoints entering this link below:
 ```http://localhost:8082/swagger-ui/index.html#/```
