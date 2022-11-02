@@ -17,6 +17,7 @@
 
     <modules>
         <module>user-service</module>
+        <module>edge-service</module>
     </modules>
 
 </project>
