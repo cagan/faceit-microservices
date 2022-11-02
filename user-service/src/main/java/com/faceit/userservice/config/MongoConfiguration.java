@@ -25,7 +25,6 @@ public class MongoConfiguration {
     }
 
     static class DateToZonedDateTimeConverter implements Converter<Date, ZonedDateTime> {
-
         @Override
         public ZonedDateTime convert(Date source) {
             return ZonedDateTime.ofInstant(source.toInstant(), ZoneOffset.ofHours(3));
@@ -33,7 +32,6 @@ public class MongoConfiguration {
     }
 
     static class ZonedDateTimeToDateConverter implements Converter<ZonedDateTime, Date> {
-
         @Override
         public Date convert(ZonedDateTime source) {
             return Date.from(source.toInstant());

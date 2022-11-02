@@ -144,7 +144,7 @@
                         </platforms>
                     </from>
                     <to>
-                        <image>docker.io/xaganic/faceit-user-microservice</image>
+                        <image>docker.io/xaganic/faceit-user-service</image>
                     </to>
                 </configuration>
             </plugin>

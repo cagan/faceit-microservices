@@ -1,8 +1,9 @@
-version: '3.1'
+version: '3.8'
 services:
   user-service:
-    container_name: faceit-user-service
-    image: xaganic/faceit-user-microservice:latest
+    pull_policy: always
+    container_name: faceit-microservices-user
+    image: xaganic/faceit-user-service:latest
     depends_on:
       - mongo
       - zookeeper
@@ -61,10 +62,11 @@ services:
     ports:
       - "9092:9092"
       - "9101:9101"
+      - "29092:29092"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://kafka:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
