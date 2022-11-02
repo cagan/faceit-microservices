@@ -43,3 +43,6 @@ You can access API endpoints entering this link below:
 - Outbox Pattern: I would implement Debezium with mongo connector and kafka in order to make sure that data is pushing safely.
 - More tests, more coverage rate.
 - Implementing security tools such as Spring Security.
+
+**Completed architecture will be like this:**
+![Screenshot 2022-11-2 at 14 17 51](https://iili.io/b6Paln.png)
