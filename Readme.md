@@ -34,13 +34,9 @@ User Management microservice that makes CRUD operations and notifies other servi
 - Type: ```docker-compose -f docker/docker-compose.yml up -d```
 - You can see the logs running: ```docker-compose -f docker/docker-compose.yml logs -f```
 
-## TODO:
-- Brief explanation of the project
-- Swagger Documentation
-- Postman collection
-- Document how to set up, run project
-- Data migrations
-
+## Swagger Link:
+You can access API endpoints entering this link below:
+```http://localhost:8082/swagger-ui/index.html#/```
 
 ## What would I implement if it was a real project?
 - I would add Kubernetes, and Gateway layer.
