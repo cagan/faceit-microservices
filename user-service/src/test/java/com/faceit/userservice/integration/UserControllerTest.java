@@ -3,6 +3,7 @@ package com.faceit.userservice.integration;
 import com.faceit.userservice.domain.model.Country;
 import com.faceit.userservice.rest.controller.UserController;
 import com.faceit.userservice.rest.request.UserCreateRequest;
+import com.faceit.userservice.rest.request.UserUpdateRequest;
 import com.faceit.userservice.rest.response.UserResponse;
 import com.faceit.userservice.service.UserQueryService;
 import com.faceit.userservice.service.UserService;
@@ -20,14 +21,13 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.ResultActions;
 
 import java.util.Objects;
 
-import static com.faceit.userservice.ResponseBodyMatchers.responseBody;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -197,29 +197,115 @@ public class UserControllerTest {
     }
 
     @Test
-    public void getUsersResponseAsExpected() throws Exception {
-        UserCreateRequest userCreateRequest = new UserCreateRequest();
-        userCreateRequest.setFirstName("John");
-        userCreateRequest.setLastName("Doe");
-        userCreateRequest.setEmail("johndoe@email.com");
-        userCreateRequest.setNickname("johndoe");
-        userCreateRequest.setPassword("P@ssword12+");
-        userCreateRequest.setCountry(String.valueOf(Country.FR));
+    public void itShould_validateCountryValues() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("john");
+        request.setLastName("doe");
+        request.setNickname("johndoe");
+        request.setEmail("johndoe@email.com");
+        request.setCountry("ASDAS");
 
-        UserResponse expectedResponseBody = new UserResponse();
-        expectedResponseBody.setFirstName("John");
-        expectedResponseBody.setLastName("Doe");
-        expectedResponseBody.setEmail("johndoe@email.com");
-        expectedResponseBody.setNickname("johndoe");
-        expectedResponseBody.setCountry(String.valueOf(Country.FR));
+        String message = Objects.requireNonNull(mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andDo(print())
+                .andReturn().getResolvedException()).getMessage();
 
-//        MvcResult mvcResult = mockMvc.perform(get("/api/v1/user")
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content("")
-//                .(responseBody().containsObjectAsJson(expectedResponseBody, UserResponse.class))
-//                .andDo(print())
-//                .andReturn();
+        Assertions.assertTrue(message.contains("Invalid country value"));
+    }
 
-//        String actualResponseBody = mvcResult.getResponse().getContentAsString();
+    @Test
+    public void itShould_validateEmail() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("john");
+        request.setLastName("doe");
+        request.setNickname("johndoe");
+        request.setEmail("invalidemailaddress");
+        request.setCountry(String.valueOf(Country.EN));
+
+        String message = Objects.requireNonNull(mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andDo(print())
+                .andReturn().getResolvedException()).getMessage();
+
+        Assertions.assertTrue(message.contains("must be a well-formed email address"));
+    }
+
+    @Test
+    public void itShould_validateNicknameMaxValue() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("john");
+        request.setLastName("doe");
+        request.setNickname("toolongnicknametoolongnicknametoolongnicknametoolongnickname");
+        request.setEmail("cagansit@test.com");
+        request.setCountry(String.valueOf(Country.EN));
+
+        String message = Objects.requireNonNull(mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andDo(print())
+                .andReturn().getResolvedException()).getMessage();
+
+        Assertions.assertTrue(message.contains("size must be between 3 and 20"));
+    }
+
+    @Test
+    public void itShould_validateNicknameMinValue() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("john");
+        request.setLastName("doe");
+        request.setNickname("ni");
+        request.setEmail("cagansit@test.com");
+        request.setCountry(String.valueOf(Country.EN));
+
+        String message = Objects.requireNonNull(mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andDo(print())
+                .andReturn().getResolvedException()).getMessage();
+
+        Assertions.assertTrue(message.contains("size must be between 3 and 20"));
+    }
+
+    @Test
+    public void itShould_validateFirstNameMaxValue() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("toolongjohndoeefirstnanmethisis");
+        request.setLastName("doe");
+        request.setNickname("nickname");
+        request.setEmail("cagansit@test.com");
+        request.setCountry(String.valueOf(Country.EN));
+
+        String message = Objects.requireNonNull(mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andDo(print())
+                .andReturn().getResolvedException()).getMessage();
+
+        Assertions.assertTrue(message.contains("size must be between 2 and 20"));
+    }
+
+    @Test
+    public void itShould_update_user_successfully_with204() throws Exception {
+        UserUpdateRequest request = new UserUpdateRequest();
+        request.setFirstName("johndoe");
+        request.setLastName("doe");
+        request.setNickname("nickname");
+        request.setEmail("cagansit@test.com");
+        request.setCountry(String.valueOf(Country.EN));
+
+        mockMvc.perform(patch("/api/v1/user/1")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isNoContent())
+                .andDo(print());
+    }
+
+    @Test
+    public void itShould_delete_user_successfully_with204() throws Exception {
+        mockMvc.perform(delete("/api/v1/user/1"))
+                .andExpect(status().isNoContent())
+                .andDo(print());
     }
 }

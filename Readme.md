@@ -28,6 +28,7 @@ User Management microservice that makes CRUD operations and notifies other servi
     - Validators: Validates requests.
 - Used JUnit 5 and also Mockito, for testing service layer, requests and controllers.
 - Unit tests and Integration tests written.
+- I wrote tests for presentation layer and service layer in this project. 
 
 ## Installation:
 - Go to root project.
@@ -37,6 +38,12 @@ User Management microservice that makes CRUD operations and notifies other servi
 ### For Building Maven Project:
 - Change application-dev.properties for your local environment. You can use docker-compose-local.yaml file for local environments.
 - Run this command to build the project ```./mvnw spring-boot:run -Dspring-boot.run.profiles=dev```
+
+### Run Tests:
+```./mvnw clean test```
+
+## Postman Collection:
+You can find Postman collection in root directory.
 
 ## Swagger Link:
 You can access API endpoints entering this link below:
@@ -48,5 +55,6 @@ You can access API endpoints entering this link below:
 - More tests, more coverage rate.
 - Implementing security tools such as Spring Security.
 
-**Completed architecture will be like this:**
+**Completed architecture would be like this:**
+
 ![Screenshot 2022-11-2 at 14 17 51](https://iili.io/b6Paln.png)

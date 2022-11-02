@@ -14,11 +14,11 @@ import javax.validation.constraints.*;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserUpdateRequest {
     @JsonProperty("first_name")
-    @Size(max = 20)
+    @Size(max = 20, min = 2)
     private String firstName;
 
     @JsonProperty("last_name")
-    @Size(max = 20)
+    @Size(max = 20, min = 2)
     private String lastName;
 
     @Size(max = 20, min = 3)
