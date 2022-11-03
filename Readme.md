@@ -69,7 +69,7 @@ You can access API endpoints entering this link below:
 ```http://localhost:8082/swagger-ui/index.html#/```
 
 ## What would I implement if it was a real project?
-- I would add Kubernetes, and Gateway layer.
+- I would add Kubernetes.
 - Outbox Pattern: I would implement Debezium with mongo connector and kafka in order to make sure that data is pushing safely.
 - More tests, more coverage rate.
 - Implementing security tools such as Spring Security.
