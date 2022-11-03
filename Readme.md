@@ -48,7 +48,8 @@ User Management microservice that makes CRUD operations and notifies other servi
 
 ## To Install Cloud Version:
 Go to root project.
-- Type: ```docker-compose up -d```
+- ```git checkout cloud```
+- ```docker-compose up -d```
 - You can access user-service through API gateway, and port is: 9000
 
 **Note**: If edge service will fail after running command, please try again and it will work.
