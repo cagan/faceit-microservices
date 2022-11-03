@@ -52,6 +52,10 @@ Go to root project.
 - ```docker-compose up -d```
 - You can access user-service through API gateway, and port is: 9000
 
+You can now access Grafana using **localhost:3000**
+- username: user
+- password: password
+
 **Note**: If edge service will fail after running command, please try again and it will work.
 
 ### For Building Maven Project:
