@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6700dc37-7e02-4ddf-8c0d-7cd9dcadba26" name="Changes" comment="unit tests.">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/application-docker.properties" afterDir="false" />
+    <list default="true" id="6700dc37-7e02-4ddf-8c0d-7cd9dcadba26" name="Changes" comment="add api gateway.">
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edge-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platform/grafana/dashboards/circuit-breaker.json" beforeDir="false" afterPath="$PROJECT_DIR$/platform/grafana/dashboards/circuit-breaker.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
@@ -55,8 +58,12 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "aspect.path.notification.shown": "true",
+    "last_opened_file_path": "/Users/cagan/code/faceit-microservices",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "442cf4015509eda9c03e5ca3aceef752"
   }
 }]]></component>
@@ -64,12 +71,32 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/edge-service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/docker" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
-    <configuration name="UserControllerTest.getUsersResponseAsExpected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EdgeServiceApplication">
+    <configuration name="All in user-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.itShould_delete_user_successfully_with204" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -79,13 +106,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
       <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
-      <option name="METHOD_NAME" value="getUsersResponseAsExpected" />
+      <option name="METHOD_NAME" value="itShould_delete_user_successfully_with204" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.itShould_update_user_successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -95,13 +122,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
       <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
+      <option name="METHOD_NAME" value="itShould_update_user_successfully" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.whenValidInputThenReturnsUserCreateResponse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.itShould_validateFirstNameMaxValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -111,13 +138,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
       <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenValidInputThenReturnsUserCreateResponse" />
+      <option name="METHOD_NAME" value="itShould_validateFirstNameMaxValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.whenValidInput_thenMapsToBusinessModel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest.itShould_validateNicknameMinValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
@@ -127,23 +154,15 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.faceit.userservice.integration" />
       <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.integration.UserControllerTest" />
-      <option name="METHOD_NAME" value="whenValidInput_thenMapsToBusinessModel" />
+      <option name="METHOD_NAME" value="itShould_validateNicknameMinValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.faceit.userservice.unit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.faceit.userservice.unit" />
-      <option name="MAIN_CLASS_NAME" value="com.faceit.userservice.unit.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="EdgeServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="edge-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.faceit.edgeservice.EdgeServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,20 +181,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UserControllerTest.getUsersResponseAsExpected" />
-      <item itemvalue="JUnit.UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
-      <item itemvalue="JUnit.UserControllerTest.whenValidInputThenReturnsUserCreateResponse" />
-      <item itemvalue="JUnit.UserControllerTest.whenValidInput_thenMapsToBusinessModel" />
-      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.All in user-service" />
+      <item itemvalue="JUnit.UserControllerTest.itShould_delete_user_successfully_with204" />
+      <item itemvalue="JUnit.UserControllerTest.itShould_update_user_successfully" />
+      <item itemvalue="JUnit.UserControllerTest.itShould_validateFirstNameMaxValue" />
+      <item itemvalue="JUnit.UserControllerTest.itShould_validateNicknameMinValue" />
+      <item itemvalue="Spring Boot.EdgeServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest.getUsersResponseAsExpected" />
-        <item itemvalue="JUnit.UserControllerTest.whenValidInputThenReturnsUserCreateResponse" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.UserControllerTest.whenValidInput_thenMapsToBusinessModel" />
-        <item itemvalue="JUnit.UserControllerTest.whenInvalidPasswordwhithoutLowerCase_itShouldReturn400" />
+        <item itemvalue="JUnit.All in user-service" />
+        <item itemvalue="JUnit.UserControllerTest.itShould_delete_user_successfully_with204" />
+        <item itemvalue="JUnit.UserControllerTest.itShould_update_user_successfully" />
+        <item itemvalue="JUnit.UserControllerTest.itShould_validateFirstNameMaxValue" />
+        <item itemvalue="JUnit.UserControllerTest.itShould_validateNicknameMinValue" />
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +209,7 @@
       <updated>1667175631607</updated>
       <workItem from="1667175632880" duration="21462000" />
       <workItem from="1667323437738" duration="20568000" />
+      <workItem from="1667407096625" duration="22044000" />
     </task>
     <task id="LOCAL-00001" summary="change Readme.md location.">
       <created>1667176636426</created>
@@ -204,7 +225,28 @@
       <option name="project" value="LOCAL" />
       <updated>1667343914727</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add postman.">
+      <created>1667416867669</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667416867669</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add spring cloud gateway with grafana, loki, prometheus, fluent, tempo.">
+      <created>1667431641706</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1667431641706</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add api gateway.">
+      <created>1667458244801</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1667458244801</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,9 +264,26 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/edge-service" />
+    </ignored-roots>
     <MESSAGE value="change Readme.md location." />
     <MESSAGE value="unit tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests." />
+    <MESSAGE value="add postman." />
+    <MESSAGE value="add spring cloud gateway with grafana, loki, prometheus, fluent, tempo." />
+    <MESSAGE value="add api gateway." />
+    <option name="LAST_COMMIT_MESSAGE" value="add api gateway." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user-service/src/test/java/com/faceit/userservice/integration/UserControllerTest.java</url>
+          <line>290</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/faceit_microservices$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1667325497684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
